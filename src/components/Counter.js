@@ -8,7 +8,7 @@ const Counter = () => {
   // select state
   const counter = useSelector((state) => state.counter);
   // show counter
-  const show = useSelector(state => state.showCounter);
+  const show = useSelector((state) => state.showCounter);
 
   const incrementHandler = () => {
     dispatch(counterActions.increment());
@@ -19,7 +19,7 @@ const Counter = () => {
   
   const increaseHandler = () =>{
     // {type: some unique identifier,payload:10}
-    dispatch(counterActions.increase(5));
+    dispatch(counterActions.increase(10));
 
   }
   const toggleCounterHandler = () => {
@@ -33,7 +33,7 @@ const Counter = () => {
       {show && <div className={classes.value}>{counter}</div>}
       <div>
         <button onClick={incrementHandler}>increment</button>
-        <button onClick={increaseHandler}>increment by 5</button>
+        <button onClick={increaseHandler}>increment by 10</button>
         <button onClick={decrementHandler}>decrement</button>
       </div>
       <button onClick={toggleCounterHandler}>Toggle Counter</button>
