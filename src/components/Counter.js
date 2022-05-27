@@ -6,9 +6,9 @@ const Counter = () => {
   // dispatch action
   const dispatch = useDispatch();
   // select state
-  const counter = useSelector((state) => state.counter);
+  const counter = useSelector((state) => state.counter.counter);
   // show counter
-  const show = useSelector((state) => state.showCounter);
+  const show = useSelector((state) => state.counter.showCounter);
 
   const incrementHandler = () => {
     dispatch(counterActions.increment());
